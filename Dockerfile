@@ -3,7 +3,7 @@ FROM nginx:latest
 RUN apt update && apt install -y unzip tmux curl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
+ENTRYPOINT ["/start.sh"]
