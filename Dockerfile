@@ -6,5 +6,5 @@ RUN apt update && apt install -y curl unzip net-tools tmux ca-certificates busyb
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-EXPOSE 3000
+EXPOSE 80 3000
 CMD ["/start.sh"]
